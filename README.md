@@ -3,7 +3,7 @@ It's a similarity measure for strings (between 0 and 1) specifically designed fo
 
 
 ## Usage
-let jw = SwiftyJaroWinkler(prefixLength: 4)
+let jw = JaroWinkler(prefixLength: 4)
 
 print(jw.similarity("DUPONT", "DUPOND"))           // ~0.97
 print(jw.similarity("Jean Martin", "Jean Martine")) // ~0.95
