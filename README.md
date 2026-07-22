@@ -7,4 +7,4 @@ let jw = JaroWinkler(prefixLength: 4)
 
 print(jw.similarity("DUPONT", "DUPOND"))           // ~0.97
 print(jw.similarity("Jean Martin", "Jean Martine")) // ~0.95
-print(jw.similarity("café", "cafe"))                // très élevé
+print(jw.similarity("café", "cafe"))                // ~0.88
