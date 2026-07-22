@@ -1,6 +1,11 @@
 # SwiftyJakoWinkler
-It's a similarity measure for strings (between 0 and 1) specifically designed for personal names and short misspellings. It takes into account the number of characters in common, the order of the characters and a significant bonus if the beginnings of the words are identical (this is Winkler's contribution).
+This is a similarity measure (between 0 and 1) specifically designed for personal names and short misspellings. It takes into account: 
+- The number of shared characters
+- The order of characters (transpositions)
+- A significant bonus if the beginnings of words are identical (this is Winkler's contribution)
 
+Main use: 
+- Ideal when comparing short strings where prefixes are important.
 
 ## Usage
 let jw = JaroWinkler(prefixLength: 4)
