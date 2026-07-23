@@ -72,6 +72,8 @@ public extension String {
         for i in 0..<len1 {
             let start = max(0, i - matchDistance)
             let end = min(len2, i + matchDistance + 1)
+
+            guard start < end else { continue }
             
             for j in start..<end where !matches2[j] && s1[i] == s2[j] {
                 matches1[i] = true
