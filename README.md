@@ -39,11 +39,11 @@ let a = "Jean Dupont"
 
 let b = "Jean Dupond"
 
-print(a.levenshteinSimilarity(to: b))
+print(a.levenshteinSimilarity(to: b)) // 0.9090909090909091
 
-print(a.jaroWinklerSimilarity(to: b))
+print(a.jaroWinklerSimilarity(to: b)) // 0.9636363636363636
 
-print(a.trigramJaccardSimilarity(to: b))
+print(a.trigramJaccardSimilarity(to: b)) // 0.8
 
 # Use cases
 Here are actual use cases where this kind of extension is commonly used:
