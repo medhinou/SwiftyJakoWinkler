@@ -34,3 +34,52 @@ Then we calculate:
 - Similarity = (common trigrams) / (all unique trigrams) Main use: Measuring the similarity between two strings based on their 3-character sequences.
 
 It's a statistical method, not an edit distance.
+# Usage
+let a = "Jean Dupont"
+
+let b = "Jean Dupond"
+
+print(a.levenshteinSimilarity(to: b))
+
+print(a.jaroWinklerSimilarity(to: b))
+
+print(a.trigramJaccardSimilarity(to: b))
+
+# Use cases
+Here are actual use cases where this kind of extension is commonly used:
+## Duplicate Detection & Data Cleaning
+- Finding duplicate customer records (e.g., "John Smith" vs "Jon Smith")
+- Merging databases with inconsistent spelling
+- Cleaning imported Excel/CSV data
+
+## Fuzzy Search / "Did You Mean?" Feature
+- Search bars that tolerate typos (very common in e-commerce apps)
+- Product search, user directory, address lookup
+
+## Record Linkage / Entity Resolution
+- Matching the same person across different systems (CRM + ERP + Billing)
+- Reconciling supplier names, company names, or product SKUs
+
+## User Experience Improvements
+- Autocomplete with typo tolerance
+- Smart suggestions when user input doesn't match exactly
+- Contact book search with fuzzy matching
+
+## Fraud Detection & Identity Verification
+- Detecting similar identities that might indicate fraud
+- Comparing names in KYC (Know Your Customer) processes
+
+## Content & Text Processing
+- Detecting similar article titles or product descriptions
+- Plagiarism checking (light version)
+- Grouping similar feedback or reviews
+
+## Business & Enterprise Tools
+- CRM systems
+- Inventory management software
+- HR & payroll systems (matching employee records)
+- Pharmacy / medical software (matching drug names)
+
+## Data Migration Projects
+- When moving data from legacy systems and needing to match old vs new records
+
