@@ -30,7 +30,7 @@ public extension String {
             current[0] = i
             for j in 1...n {
                 let cost = t1[i-1] == t2[j-1] ? 0 : 1
-                current[j] = min(
+                current[j] = Swift.min(
                     current[j-1] + 1,
                     previous[j] + 1,
                     previous[j-1] + cost
