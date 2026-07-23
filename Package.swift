@@ -1,5 +1,5 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftyJakoWinkler"
+    name: "Swift-String-Similarity"
 )
