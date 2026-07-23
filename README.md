@@ -7,11 +7,28 @@ This is a similarity measure (between 0 and 1) specifically designed for persona
 Main use: 
 - Ideal when comparing short strings where prefixes are important.
 
-## Usage
-let jw = JaroWinkler(prefixLength: 4)
 
-print(jw.similarity("DUPONT", "DUPOND"))           // ~0.97
+# SwiftyLevenshtein
+This is an edit distance. It calculates the minimum number of operations required to transform one string into another: 
+- Inserting a character
+- Deleting a character
+- Substituting (replacing) a character
 
-print(jw.similarity("Jean Martin", "Jean Martine")) // ~0.95
+Main use: 
+- To measure how different two strings are.
+- Very intuitive: a distance of 0 = identical strings.
+- Very versatile.
 
-print(jw.similarity("café", "cafe"))                // ~0.88
+# SwiftJaccard
+It's a similarity measure that combines two ideas: 
+- Trigrams: splitting words into groups of 3 consecutive characters.
+- Jaccard coefficient: calculating the ratio between common elements and all unique elements.
+
+Example: 
+- "dupont" → trigrams: {"dup", "upo", "pon", "ont"}
+- "dupond" → trigrams: {"dup", "upo", "pon", "ond"}
+
+Then we calculate:
+- Similarity = (common trigrams) / (all unique trigrams) Main use: Measuring the similarity between two strings based on their 3-character sequences.
+
+It's a statistical method, not an edit distance.
