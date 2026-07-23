@@ -1,6 +1,6 @@
 # Swift-String-Similarity, a Swift String Extension
 
-## SwiftyJakoWinkler
+## JakoWinkler
 This is a similarity measure (between 0 and 1) specifically designed for personal names and short misspellings. It takes into account: 
 - The number of shared characters
 - The order of characters (transpositions)
@@ -10,7 +10,7 @@ Main use:
 - Ideal when comparing short strings where prefixes are important.
 
 
-## SwiftyLevenshtein
+## Levenshtein
 This is an edit distance. It calculates the minimum number of operations required to transform one string into another: 
 - Inserting a character
 - Deleting a character
@@ -21,7 +21,7 @@ Main use:
 - Very intuitive: a distance of 0 = identical strings.
 - Very versatile.
 
-## SwiftJaccard
+## Jaccard
 It's a similarity measure that combines two ideas: 
 - Trigrams: splitting words into groups of 3 consecutive characters.
 - Jaccard coefficient: calculating the ratio between common elements and all unique elements.
