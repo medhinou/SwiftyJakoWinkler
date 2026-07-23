@@ -1,4 +1,5 @@
 # Swift-String-Similarity, a Swift String Extension
+To improve search engine results, for example, in addition to the traditional "equals", "starts with", or "contains" methods, here are three algorithms that allow you to take into account more cases, including typos, spelling mistakes, and more.
 
 ## JakoWinkler
 This is a similarity measure (between 0 and 1) specifically designed for personal names and short misspellings. It takes into account: 
